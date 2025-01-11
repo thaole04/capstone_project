@@ -10,7 +10,9 @@ alpr = ALPR(
 # The "assets/test_image.png" can be found in repo root dit
 # You can also pass a NumPy array containing cropped plate image
 start_time = time.time()
-alpr_results = alpr.predict("./License-Plate-Recognition/test_image/101.jpg")
+alpr_results = alpr.predict("./License-Plate-Recognition/test_image/test.jpg")
 end_time = time.time()
 print(alpr_results)
+bounding_box = alpr_results.bounding_box
+print(bounding_box)
 print("Ex time: ", end_time-start_time)
